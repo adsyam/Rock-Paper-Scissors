@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock-Paper-Scissors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <script defer src="index.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- <div class="bubbles"> -->
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <!-- </div> -->
+
+    <section
+      class="flex justify-center items-center flex-col mt-10 relative"
+      id="welcome"
+    >
+      <div
+        class="flex justify-center items-center flex-col gap-4 absolute z-10 top-20 border p-6 rounded-lg bg-white border-[#ffa500] shadow-2xl"
+      >
+        <h1 class="text-6xl font-poppins text-[#ffa500]">WELCOME!</h1>
+        <input
+          type="text"
+          id="user"
+          placeholder="What's your name?"
+          class="outline-none rounded-lg p-2 text-center"
+        />
+        <div class="error hidden">
+          <p>Please Enter a name...</p>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="flex justify-center items-center flex-col mt-10 hidden"
+      id="play-area"
+    >
+      <div
+        class="bg-[#ffa500] flex flex-col border p-7 shadow-2xl rounded-xl gap-5"
+      >
+        <p class="font-bold text-4xl text-center text-slate-200 drop-shadow-lg">ROCK PAPER SCISSORS</p>
+        <p class="text-red-50" id="warning"></p>
+        <div class="flex justify-center">
+          <button class="rock" type="button">
+            <img src="./src/images/rock-emoji.png" alt="Rock" width="100" />
+          </button>
+          <button class="paper">
+            <img src="./src/images/paper-emoji.png" alt="Paper" width="100" />
+          </button>
+          <button class="scissors">
+            <img
+              src="./src/images/scissors-emoji.png"
+              alt="Scissors"
+              width="100"
+            />
+          </button>
+        </div>
+        <div class="">
+          <div class="flex justify-center moves"></div>
+          <p
+            class="score flex justify-center border rounded-lg mt-2 shadow-xl"
+          ></p>
+        </div>
+        <div class="flex justify-center gap-2">
+          <button
+            class="reset-score border-white p-1 border rounded-lg shadow-xl"
+          >
+            Reset
+          </button>
+          <button class="auto-play">Auto Play</button>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
